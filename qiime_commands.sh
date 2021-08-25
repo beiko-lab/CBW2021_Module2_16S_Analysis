@@ -16,7 +16,7 @@ qiime dada2 denoise-paired --i-demultiplexed-seqs CBW_Willis_reads.qza --o-table
 #If you have a large amount of RAM (32GB or greater), try the larger SILVA database:
 wget https://data.qiime2.org/2021.4/common/silva-138-99-nb-classifier.qza
 
-qiime feature-classifier classify-sklearn --i-classifier gg-13-8-99-nb-classifier.qza --i-reads representative_sequences.qza --o-classification taxonomy
+qiime feature-classifier classify-sklearn --i-classifier silva-138-99-nb-classifier.qza --i-reads representative_sequences.qza --o-classification taxonomy
 
 #This visualization shows us the sequences/sample spread
 qiime feature-table summarize --i-table unfiltered_table.qza --o-visualization table_summary

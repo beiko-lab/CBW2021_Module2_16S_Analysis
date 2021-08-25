@@ -7,10 +7,10 @@ cd sequence_data/
 #qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' --input-path import_to_qiime --output-path CBW_reads
 
 #Using DADA2 to analyze quality scores of 10 random samples
-qiime demux summarize --p-n 10000 --i-data CBW_reads.qza --o-visualization qual_viz
+qiime demux summarize --p-n 10000 --i-data CBW_Willis_reads.qza --o-visualization qual_viz
 
 #Denoising with DADA2. Using quality score visualizations, you can choose trunc-len-f and trunc-len-r (note: sequences < trunc-len in length are discarded!)
-qiime dada2 denoise-paired --i-demultiplexed-seqs CBW_reads.qza --o-table unfiltered_table --o-representative-sequences representative_sequences --p-trunc-len-f 240 --p-trunc-len-r 240 --p-n-threads 4 --o-denoising-stats denoise_stats.qza --verbose
+qiime dada2 denoise-paired --i-demultiplexed-seqs CBW_Willis_reads.qza --o-table unfiltered_table --o-representative-sequences representative_sequences --p-trunc-len-f 240 --p-trunc-len-r 240 --p-n-threads 4 --o-denoising-stats denoise_stats.qza --verbose
 
 #wget https://data.qiime2.org/2019.1/common/gg-13-8-99-nb-classifier.qza
 #If you have a large amount of RAM (32GB or greater), try the larger SILVA database:

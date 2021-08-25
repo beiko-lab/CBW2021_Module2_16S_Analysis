@@ -4,7 +4,7 @@
 mkdir -p qiime_artifacts
 cd sequence_data/
 #This command imports the FASTQ files into a QIIME artifact
-qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' --input-path import_to_qiime --output-path CBW_reads
+#qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' --input-path import_to_qiime --output-path CBW_reads
 
 #Using DADA2 to analyze quality scores of 10 random samples
 qiime demux summarize --p-n 10000 --i-data CBW_reads.qza --o-visualization qual_viz

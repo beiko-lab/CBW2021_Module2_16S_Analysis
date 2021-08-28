@@ -1,4 +1,4 @@
-# CBW2021 Module 1 16S Analysis
+# CBW2021 Module 2 (16S Analysis)
 
 This is the data and script repository for the Canadian Bioinformatics Workshop's 2021 16S Analysis module.
 
